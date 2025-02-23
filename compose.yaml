@@ -1,0 +1,37 @@
+services:
+  stt_service:
+    build: ./stt_service
+    ports:
+      - "8000:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: [gpu]
+  llm_service:
+    build: ./llm_service
+    ports:
+      - "8001:8000"
+  tts_service:
+    build: ./tts_service
+    ports:
+      - "8002:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              # Use same GPU 0 as the target is a personal computer with single GPU
+              # You can use `count: 1` for multiple GPUs setup
+              device_ids: ["0"]
+              capabilities: [gpu]
+  frontend:
+    build: ./frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - stt_service
+      - llm_service
+      - tts_service

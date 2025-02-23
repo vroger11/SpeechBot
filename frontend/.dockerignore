@@ -1,0 +1,14 @@
+# Ignore virtual environments
+.venv/
+env/
+venv/
+
+# Ignore Python cache and temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Optionally ignore other common files/folders
+*.egg-info/
+dist/
+build/

@@ -1,0 +1,19 @@
+[project]
+name = "frontend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32.3",
+    "streamlit>=1.42.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=8.32.0",
+    "ruff>=0.9.6",
+]
+
+[tool.uv]
+default-groups = []
