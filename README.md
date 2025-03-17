@@ -3,7 +3,8 @@
 A set of services to create a prototype to speak with a chatbot that speaks back the answer to the user.
 
 This repository is designed to create an application for a personal computer (with one GPU having 6Go of VRAM minium), further modifications are required to serve it for multiple users on the cloud.
-Tutorials will come over my blog (<https://website.vincent-roger.fr/blog/>).
+The tutorial associated with this release is available on my blog here: <https://website.vincent-roger.fr/blog/2025/03-17-speechbot-starting-point/>.
+More tutorials will come over my [blog](https://website.vincent-roger.fr/blog/) with next releases.
 
 The announcement for the first version of this project is now live. Watch the video on YouTube: [Watch Now](https://youtu.be/5Cik2asxGfM).
 
